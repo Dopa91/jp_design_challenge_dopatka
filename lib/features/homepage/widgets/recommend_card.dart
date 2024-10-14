@@ -99,9 +99,25 @@ class RecommendCard extends StatelessWidget {
                                 )
                               ],
                             ),
-                            const IngredientsIcon(
-                              icon: Icons.info_outline,
-                            )
+                            const Row(
+                              children: [
+                                BottomSheetIconRow(
+                                  icon: Icons.info_outline,
+                                  iconTwo: Icons.info_outline,
+                                  iconThree: Icons.info_outline,
+                                  iconFour: Icons.info_outline,
+                                ),
+                                Expanded(
+                                  child: SizedBox(),
+                                ),
+                                BottomSheetIconRow(
+                                  icon: Icons.star,
+                                  iconTwo: Icons.star,
+                                  iconThree: Icons.star,
+                                  iconFour: Icons.star_border,
+                                ),
+                              ],
+                            ),
                           ],
                         ),
                       ),
@@ -119,6 +135,16 @@ class RecommendCard extends StatelessWidget {
                         icon: null,
                         buttonWidth: 350,
                         fontSize: 16),
+                  ),
+                  const Positioned(
+                    left: 0,
+                    bottom: 128,
+                    child: Text("Placeholder"),
+                  ),
+                  const Positioned(
+                    right: 0,
+                    bottom: 128,
+                    child: Text("Placeholder"),
                   ),
                 ],
               ),
