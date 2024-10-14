@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jp_design_challenge_dopatka/features/homepage/widgets/horizont_card_view.dart';
 import 'package:jp_design_challenge_dopatka/features/homepage/widgets/horizont_menu_bar.dart';
-import 'package:jp_design_challenge_dopatka/features/homepage/widgets/recommend_card.dart';
 import 'package:jp_design_challenge_dopatka/features/homepage/widgets/top_card_view.dart';
 
 class Homepage extends StatelessWidget {
