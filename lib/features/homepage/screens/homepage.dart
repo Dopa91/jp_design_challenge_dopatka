@@ -39,6 +39,7 @@ class Homepage extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     children: const [
                       Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           MyButtonRound(
                             newText: "All categories",
