@@ -12,8 +12,9 @@ class MyBlurryCont extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          border: Border.all(color: const Color.fromARGB(131, 255, 255, 255)),
-          borderRadius: BorderRadius.circular(32)),
+        border: Border.all(color: const Color.fromARGB(131, 255, 255, 255)),
+        borderRadius: BorderRadius.circular(32),
+      ),
       child: BlurryContainer(
         elevation: 4,
         blur: 12,
