@@ -1,7 +1,5 @@
-import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:flutter/material.dart';
-import 'package:jp_design_challenge_dopatka/features/detail_bottom_sheet/widgets/ingredients_icon.dart';
-import 'package:jp_design_challenge_dopatka/features/shared/my_button.dart';
+import 'package:jp_design_challenge_dopatka/features/detail_bottom_sheet/screens/bottom_sheet_page.dart';
 
 class RecommendCard extends StatelessWidget {
   const RecommendCard({
@@ -26,129 +24,8 @@ class RecommendCard extends StatelessWidget {
         showModalBottomSheet(
           context: context,
           builder: (BuildContext context) {
-            return Container(
-              height: 700,
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 61, 57, 57),
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: Stack(
-                clipBehavior: Clip.none,
-                children: [
-                  Positioned(
-                    left: 0,
-                    right: 0,
-                    top: -350,
-                    child: Image.asset(
-                      imagePath,
-                    ),
-                  ),
-                  Positioned(
-                    left: 0,
-                    right: 0,
-                    bottom: 196,
-                    child: Container(
-                      height: 300,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.white),
-                        borderRadius: BorderRadius.circular(32),
-                      ),
-                      child: BlurryContainer(
-                        elevation: 4,
-                        borderRadius: BorderRadius.circular(32),
-                        child: Column(
-                          children: [
-                            Text(
-                              title,
-                              style: const TextStyle(
-                                  fontSize: 26,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white),
-                            ),
-                            const SizedBox(height: 8),
-                            const Text(
-                              "Lorem ipsum dolor sit amet consectetur. Non feugiat imperdiet a vel sit at amet. Mi accumsan feugiat magna aliquam feugiat ac et. Pulvinar hendrerit id arcu at sed etiam semper mi hendrerit. Id aliquet quis quam.",
-                              style:
-                                  TextStyle(fontSize: 14, color: Colors.white),
-                            ),
-                            const SizedBox(height: 16),
-                            Text(
-                              "Price: $price",
-                              style: const TextStyle(
-                                  fontSize: 18,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w600),
-                            ),
-                            const SizedBox(
-                              height: 16,
-                            ),
-                            const Divider(),
-                            const Row(
-                              children: [
-                                Text(
-                                  "ingredients",
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 12),
-                                ),
-                                Expanded(child: SizedBox()),
-                                Text(
-                                  "Reviews",
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 12),
-                                )
-                              ],
-                            ),
-                            const Row(
-                              children: [
-                                BottomSheetIconRow(
-                                  icon: Icons.info_outline,
-                                  iconTwo: Icons.info_outline,
-                                  iconThree: Icons.info_outline,
-                                  iconFour: Icons.info_outline,
-                                ),
-                                Expanded(
-                                  child: SizedBox(),
-                                ),
-                                BottomSheetIconRow(
-                                  icon: Icons.star,
-                                  iconTwo: Icons.star,
-                                  iconThree: Icons.star,
-                                  iconFour: Icons.star_border,
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 0,
-                    right: 0,
-                    bottom: 32,
-                    child: MyButton(
-                        newText: "Add to order for ¥ 8.99",
-                        nextSite: () {
-                          Navigator.pop(context);
-                        },
-                        icon: null,
-                        buttonWidth: 350,
-                        fontSize: 16),
-                  ),
-                  const Positioned(
-                    left: 0,
-                    bottom: 128,
-                    child: Text("Placeholder"),
-                  ),
-                  const Positioned(
-                    right: 0,
-                    bottom: 128,
-                    child: Text("Placeholder"),
-                  ),
-                ],
-              ),
-            );
+            return BottomSheetPage(
+                imagePath: imagePath, title: title, price: price);
           },
         );
       },
