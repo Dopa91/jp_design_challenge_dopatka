@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jp_design_challenge_dopatka/features/homepage/widgets/my_button_round.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -13,28 +14,68 @@ class Homepage extends StatelessWidget {
             image: AssetImage("assets/images/bg_mainscreen.png"),
           ),
         ),
-        child: const SafeArea(
+        child: SafeArea(
           child: Padding(
-            padding: EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Choose Your Favorite",
                   style: TextStyle(
                       fontSize: 26,
                       color: Colors.white,
                       fontWeight: FontWeight.w700),
                 ),
-                Text(
+                const Text(
                   "Snack",
                   style: TextStyle(
                       fontSize: 26,
                       color: Colors.white,
                       fontWeight: FontWeight.w700),
                 ),
-                Row(
-                  children: [],
+                Expanded(
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: const [
+                      Row(
+                        children: [
+                          MyButtonRound(
+                            newText: "All categories",
+                            nextSite: null,
+                            iconFirst: Icons.fastfood_outlined,
+                            icon: Icons.keyboard_arrow_down_outlined,
+                            buttonWidth: 164,
+                            fontSize: 12,
+                          ),
+                          MyButtonRound(
+                            newText: "Salty",
+                            nextSite: null,
+                            buttonWidth: 84,
+                            fontSize: 14,
+                            icon: null,
+                            iconFirst: null,
+                          ),
+                          MyButtonRound(
+                            newText: "Sweet",
+                            nextSite: null,
+                            buttonWidth: 84,
+                            fontSize: 14,
+                            icon: null,
+                            iconFirst: null,
+                          ),
+                          MyButtonRound(
+                            newText: "Drinks",
+                            nextSite: null,
+                            buttonWidth: 84,
+                            fontSize: 14,
+                            icon: null,
+                            iconFirst: null,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 )
               ],
             ),
