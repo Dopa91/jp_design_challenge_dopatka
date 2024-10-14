@@ -44,7 +44,7 @@ class BottomSheetStackWidget extends StatelessWidget {
               },
               icon: null,
               buttonWidth: 350,
-              fontSize: 16),
+              fontSize: 18),
         ),
         const Positioned(
           left: 0,
