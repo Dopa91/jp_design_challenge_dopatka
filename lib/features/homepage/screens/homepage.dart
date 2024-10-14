@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:jp_design_challenge_dopatka/features/homepage/widgets/my_button_round.dart';
+import 'package:jp_design_challenge_dopatka/features/homepage/widgets/horizont_menu_bar.dart';
+import 'package:jp_design_challenge_dopatka/features/shared/my_button.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -34,50 +35,87 @@ class Homepage extends StatelessWidget {
                       color: Colors.white,
                       fontWeight: FontWeight.w700),
                 ),
+                const HorizontMenuBar(),
                 Expanded(
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: const [
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          MyButtonRound(
-                            newText: "All categories",
-                            nextSite: null,
-                            iconFirst: Icons.fastfood_outlined,
-                            icon: Icons.keyboard_arrow_down_outlined,
-                            buttonWidth: 164,
-                            fontSize: 12,
-                          ),
-                          MyButtonRound(
-                            newText: "Salty",
-                            nextSite: null,
-                            buttonWidth: 84,
-                            fontSize: 14,
-                            icon: null,
-                            iconFirst: null,
-                          ),
-                          MyButtonRound(
-                            newText: "Sweet",
-                            nextSite: null,
-                            buttonWidth: 84,
-                            fontSize: 14,
-                            icon: null,
-                            iconFirst: null,
-                          ),
-                          MyButtonRound(
-                            newText: "Drinks",
-                            nextSite: null,
-                            buttonWidth: 84,
-                            fontSize: 14,
-                            icon: null,
-                            iconFirst: null,
-                          ),
-                        ],
+                  flex: 6,
+                  child: Stack(
+                    alignment: Alignment.center,
+                    fit: StackFit.expand,
+                    children: [
+                      Positioned(
+                        top: 0,
+                        child: Transform.scale(
+                            scale: 1.1,
+                            child: Image.asset("assets/images/Top Card.png")),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 32, top: 12),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Angi's Yummy Burger",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w700),
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Text(
+                              "Delish vegan burger",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Text(
+                              "thats tastes like heaven",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            SizedBox(
+                              height: 16,
+                            ),
+                            Text(
+                              "¥ 13.99",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w700),
+                            ),
+                            SizedBox(
+                              height: 32,
+                            ),
+                            MyButton(
+                              newText: "Add to order",
+                              nextSite: null,
+                              icon: null,
+                              buttonWidth: 112,
+                              fontSize: 12,
+                            ),
+                          ],
+                        ),
+                      ),
+                      Positioned(
+                        right: 72,
+                        top: 16,
+                        child: Image.asset("assets/images/star.png"),
+                      ),
+                      const Positioned(
+                        right: 44,
+                        top: 14,
+                        child: Text(
+                          "4.8",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                      Positioned(
+                        height: 232,
+                        left: 164,
+                        top: 32,
+                        child: Image.asset("assets/images/Burger_3D.png"),
                       ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ),
