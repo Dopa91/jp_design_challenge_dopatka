@@ -9,7 +9,7 @@ class HorizontMenuBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 82,
+      height: 64,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: const [
