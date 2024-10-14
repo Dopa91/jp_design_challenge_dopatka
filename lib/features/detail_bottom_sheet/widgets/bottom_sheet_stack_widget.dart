@@ -49,7 +49,9 @@ class BottomSheetStackWidget extends StatelessWidget {
         const Positioned(
           left: 0,
           bottom: 128,
-          child: Text("Placeholder"),
+          child: Row(
+            children: [Text("Placeholder")],
+          ),
         ),
         const Positioned(
           right: 0,
