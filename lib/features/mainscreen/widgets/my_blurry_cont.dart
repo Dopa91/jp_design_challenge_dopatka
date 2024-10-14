@@ -11,6 +11,7 @@ class MyBlurryCont extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlurryContainer(
+      elevation: 4,
       blur: 12,
       height: 220,
       width: 380,
