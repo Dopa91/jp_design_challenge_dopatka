@@ -27,9 +27,10 @@ class MyButtonRound extends StatelessWidget {
         padding: const EdgeInsets.all(4.0),
         child: Container(
           width: buttonWidth,
-          height: 52,
+          height: 50,
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
+            border: Border.all(color: Colors.white),
             color: const Color.fromARGB(255, 218, 85, 187),
             borderRadius: BorderRadius.circular(32),
           ),
