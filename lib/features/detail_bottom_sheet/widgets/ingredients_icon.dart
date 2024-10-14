@@ -20,22 +20,22 @@ class BottomSheetIconRow extends StatelessWidget {
         Icon(
           icon,
           color: Colors.white,
-          size: 24,
+          size: 21,
         ),
         Icon(
           iconTwo,
           color: Colors.white,
-          size: 24,
+          size: 21,
         ),
         Icon(
           iconThree,
           color: Colors.white,
-          size: 24,
+          size: 21,
         ),
         Icon(
           iconFour,
           color: Colors.white,
-          size: 24,
+          size: 21,
         ),
       ],
     );
