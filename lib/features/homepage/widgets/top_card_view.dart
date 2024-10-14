@@ -15,7 +15,7 @@ class TopCardView extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Positioned(
-            top: 0,
+            top: 12,
             child: Transform.scale(
                 scale: 1.1, child: Image.asset("assets/images/Top Card.png")),
           ),
@@ -53,7 +53,7 @@ class TopCardView extends StatelessWidget {
                       fontWeight: FontWeight.w700),
                 ),
                 SizedBox(
-                  height: 32,
+                  height: 52,
                 ),
                 MyButton(
                   newText: "Add to order",
@@ -79,13 +79,15 @@ class TopCardView extends StatelessWidget {
             ),
           ),
           Positioned(
-            height: 232,
-            left: 164,
-            top: 32,
-            child: Image.asset("assets/images/Burger_3D.png"),
+            height: 250,
+            left: 150,
+            top: 40,
+            child: Image.asset(
+              "assets/images/Burger_3D.png",
+            ),
           ),
           const Positioned(
-            top: 310,
+            top: 350,
             left: 8,
             child: Text(
               "We Recommend",
