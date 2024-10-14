@@ -35,6 +35,9 @@ class MyButtonRound extends StatelessWidget {
           ),
           child: Row(
             children: [
+              const Expanded(
+                child: SizedBox(),
+              ),
               iconFirst == null
                   ? const SizedBox()
                   : Icon(
@@ -55,6 +58,9 @@ class MyButtonRound extends StatelessWidget {
                       icon,
                       color: Colors.white,
                     ),
+              const Expanded(
+                child: SizedBox(),
+              ),
             ],
           ),
         ),
