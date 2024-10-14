@@ -113,6 +113,17 @@ class Homepage extends StatelessWidget {
                         top: 32,
                         child: Image.asset("assets/images/Burger_3D.png"),
                       ),
+                      const Positioned(
+                        bottom: 290,
+                        left: 8,
+                        child: Text(
+                          "We Recommend",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700),
+                        ),
+                      ),
                     ],
                   ),
                 ),
