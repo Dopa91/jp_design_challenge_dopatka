@@ -54,7 +54,39 @@ class BottomSheetStackWidget extends StatelessWidget {
         const Positioned(
           right: 0,
           bottom: 128,
-          child: Text("Placeholder"),
+          child: Row(
+            children: [
+              IconButton(
+                onPressed: null,
+                icon: Icon(
+                  Icons.add_circle_outline,
+                  color: Colors.white,
+                  size: 28,
+                ),
+              ),
+              SizedBox(
+                width: 8,
+              ),
+              Text(
+                "1",
+                style: TextStyle(
+                    fontSize: 21,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white),
+              ),
+              SizedBox(
+                width: 8,
+              ),
+              IconButton(
+                onPressed: null,
+                icon: Icon(
+                  Icons.remove_circle_outline,
+                  color: Colors.white,
+                  size: 28,
+                ),
+              ),
+            ],
+          ),
         ),
       ],
     );
