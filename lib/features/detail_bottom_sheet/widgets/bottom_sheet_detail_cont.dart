@@ -79,6 +79,16 @@ class BottomSheetDetailCont extends StatelessWidget {
                   iconThree: Icons.star,
                   iconFour: Icons.star_border,
                 ),
+                SizedBox(
+                  width: 8,
+                ),
+                Text(
+                  "4.0",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w700),
+                ),
               ],
             ),
           ],
