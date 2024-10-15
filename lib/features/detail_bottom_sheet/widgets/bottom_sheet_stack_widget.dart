@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jp_design_challenge_dopatka/features/detail_bottom_sheet/widgets/bottom_sheet_detail_cont.dart';
 import 'package:jp_design_challenge_dopatka/features/shared/my_button.dart';
 
-class BottomSheetStackWidget extends StatelessWidget {
+class BottomSheetStackWidget extends StatefulWidget {
   const BottomSheetStackWidget({
     super.key,
     required this.imagePath,
@@ -15,6 +15,13 @@ class BottomSheetStackWidget extends StatelessWidget {
   final String price;
 
   @override
+  BottomSheetStackWidgetState createState() => BottomSheetStackWidgetState();
+}
+
+class BottomSheetStackWidgetState extends State<BottomSheetStackWidget> {
+  List<bool> selectedButton = [true, false, false];
+
+  @override
   Widget build(BuildContext context) {
     return Stack(
       clipBehavior: Clip.none,
@@ -22,16 +29,20 @@ class BottomSheetStackWidget extends StatelessWidget {
         Positioned(
           left: 0,
           right: 0,
-          top: -350,
-          child: Image.asset(
-            imagePath,
+          top: -150,
+          child: Transform.scale(
+            scale: 1.125,
+            child: Image.asset(
+              widget.imagePath,
+            ),
           ),
         ),
         Positioned(
           left: 0,
           right: 0,
           bottom: 196,
-          child: BottomSheetDetailCont(title: title, price: price),
+          child:
+              BottomSheetDetailCont(title: widget.title, price: widget.price),
         ),
         Positioned(
           left: 0,
@@ -46,11 +57,42 @@ class BottomSheetStackWidget extends StatelessWidget {
               buttonWidth: 350,
               fontSize: 18),
         ),
-        const Positioned(
+        Positioned(
           left: 0,
           bottom: 128,
           child: Row(
-            children: [Text("Placeholder")],
+            children: [
+              ToggleButtons(
+                highlightColor: Colors.grey[400],
+                color: Colors.grey[600],
+                selectedColor: Colors.white,
+                borderRadius: BorderRadius.circular(16),
+                isSelected: selectedButton,
+                onPressed: (int index) {
+                  setState(
+                    () {
+                      for (int i = 0; i < selectedButton.length; i++) {
+                        selectedButton[i] = i == index;
+                      }
+                    },
+                  );
+                },
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text("Small"),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text("Medium"),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text("Large"),
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
         const Positioned(
