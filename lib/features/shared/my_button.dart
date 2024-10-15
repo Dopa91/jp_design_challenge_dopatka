@@ -23,13 +23,31 @@ class MyButton extends StatelessWidget {
       onTap: nextSite,
       child: Container(
         width: buttonWidth,
+        height: 55,
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          gradient: const LinearGradient(colors: [
-            Color.fromARGB(255, 218, 85, 187),
-            Color.fromARGB(255, 226, 131, 218),
-            Color.fromARGB(255, 243, 171, 230),
-          ]),
+          border: Border.all(
+            color: const Color.fromARGB(255, 238, 178, 232),
+          ),
+          boxShadow: const [
+            BoxShadow(
+              color: Color.fromARGB(255, 221, 133, 198),
+              spreadRadius: 3,
+              blurRadius: 5,
+            ),
+            BoxShadow(
+              color: Color.fromARGB(255, 190, 41, 200),
+              spreadRadius: 1,
+              blurRadius: 3,
+            )
+          ],
+          gradient: const LinearGradient(
+            colors: [
+              Color.fromARGB(255, 218, 85, 187),
+              Color.fromARGB(255, 226, 131, 218),
+              Color.fromARGB(255, 243, 171, 230),
+            ],
+          ),
           color: const Color.fromARGB(255, 218, 85, 187),
           borderRadius: BorderRadius.circular(12),
         ),
