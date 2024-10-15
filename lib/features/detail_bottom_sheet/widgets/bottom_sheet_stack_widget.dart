@@ -49,7 +49,7 @@ class BottomSheetStackWidgetState extends State<BottomSheetStackWidget> {
           right: 0,
           bottom: 32,
           child: MyButton(
-            newText: "Add to order for ¥ 8.99",
+            newText: "Add to order for ¥ ${widget.price}",
             nextSite: () {
               Navigator.pop(context);
             },
@@ -57,6 +57,11 @@ class BottomSheetStackWidgetState extends State<BottomSheetStackWidget> {
             buttonWidth: 350,
             fontSize: 18,
             buttonHeight: 55,
+            gradientOne: const Color.fromARGB(255, 186, 97, 174),
+            gradientTwo: const Color.fromARGB(255, 229, 145, 215),
+            gradientthree: const Color.fromARGB(255, 198, 176, 130),
+            shadowOne: const Color.fromARGB(255, 145, 129, 95),
+            shadowTwo: const Color.fromARGB(255, 193, 114, 183),
           ),
         ),
         Positioned(
