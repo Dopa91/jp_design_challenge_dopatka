@@ -14,84 +14,98 @@ class BottomSheetDetailCont extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 300,
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.white),
-        borderRadius: BorderRadius.circular(32),
-      ),
-      child: BlurryContainer(
-        elevation: 4,
-        borderRadius: BorderRadius.circular(32),
-        child: Column(
-          children: [
-            Text(
-              title,
-              style: const TextStyle(
-                  fontSize: 26,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
-            ),
-            const SizedBox(height: 8),
-            const Text(
-              "Lorem ipsum dolor sit amet consectetur. Non feugiat imperdiet a vel sit at amet. Mi accumsan feugiat magna aliquam feugiat ac et. Pulvinar hendrerit id arcu at sed etiam semper mi hendrerit. Id aliquet quis quam.",
-              style: TextStyle(fontSize: 14, color: Colors.white),
-            ),
-            const SizedBox(height: 16),
-            Text(
-              "Price: $price",
-              style: const TextStyle(
-                  fontSize: 18,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w600),
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            const Divider(),
-            const Row(
-              children: [
-                Text(
-                  "ingredients",
-                  style: TextStyle(color: Colors.white, fontSize: 12),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border.all(color: const Color.fromARGB(106, 190, 196, 235)),
+          borderRadius: BorderRadius.circular(32),
+        ),
+        child: BlurryContainer(
+          height: 342,
+          blur: 24,
+          elevation: 32,
+          borderRadius: BorderRadius.circular(32),
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 16,
+              ),
+              Text(
+                title,
+                style: const TextStyle(
+                    fontSize: 26,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              ),
+              const SizedBox(height: 8),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text(
+                  textAlign: TextAlign.center,
+                  "Lorem ipsum dolor sit amet consectetur. Non feugiat imperdiet a vel sit at amet. Mi accumsan feugiat magna aliquam feugiat ac et. Pulvinar hendrerit id arcu at sed etiam semper mi hendrerit. Id aliquet quis quam.",
+                  style: TextStyle(fontSize: 14, color: Colors.white),
                 ),
-                Expanded(child: SizedBox()),
-                Text(
-                  "Reviews",
-                  style: TextStyle(color: Colors.white, fontSize: 12),
-                )
-              ],
-            ),
-            const Row(
-              children: [
-                BottomSheetIconRow(
-                  icon: Icons.info_outline,
-                  iconTwo: Icons.info_outline,
-                  iconThree: Icons.info_outline,
-                  iconFour: Icons.info_outline,
-                ),
-                Expanded(
-                  child: SizedBox(),
-                ),
-                BottomSheetIconRow(
-                  icon: Icons.star,
-                  iconTwo: Icons.star,
-                  iconThree: Icons.star,
-                  iconFour: Icons.star_border,
-                ),
-                SizedBox(
-                  width: 8,
-                ),
-                Text(
-                  "4.0",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w700),
-                ),
-              ],
-            ),
-          ],
+              ),
+              const SizedBox(height: 16),
+              Text(
+                price,
+                style: const TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w800),
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Divider(),
+              ),
+              const Row(
+                children: [
+                  Text(
+                    "ingredients",
+                    style: TextStyle(color: Colors.white, fontSize: 12),
+                  ),
+                  Expanded(child: SizedBox()),
+                  Text(
+                    "Reviews",
+                    style: TextStyle(color: Colors.white, fontSize: 12),
+                  )
+                ],
+              ),
+              const Row(
+                children: [
+                  BottomSheetIconRow(
+                    icon: Icons.info_outline,
+                    iconTwo: Icons.info_outline,
+                    iconThree: Icons.info_outline,
+                    iconFour: Icons.info_outline,
+                  ),
+                  Expanded(
+                    child: SizedBox(),
+                  ),
+                  BottomSheetIconRow(
+                    icon: Icons.star,
+                    iconTwo: Icons.star,
+                    iconThree: Icons.star,
+                    iconFour: Icons.star_border,
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Text(
+                    "4.0",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w700),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
