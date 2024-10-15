@@ -31,7 +31,8 @@ class MainScreen extends StatelessWidget {
           ),
           Positioned(
             top: 516,
-            child: Image.asset("assets/images/T2.png"),
+            child: Transform.scale(
+                scale: 1.1, child: Image.asset("assets/images/T2.png")),
           ),
           const Positioned(
             bottom: 80,
