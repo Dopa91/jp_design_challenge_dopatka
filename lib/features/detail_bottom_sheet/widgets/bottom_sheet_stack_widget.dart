@@ -56,7 +56,7 @@ class BottomSheetStackWidgetState extends State<BottomSheetStackWidget> {
             icon: null,
             buttonWidth: 350,
             fontSize: 18,
-            buttonHeight: 50,
+            buttonHeight: 55,
           ),
         ),
         Positioned(
