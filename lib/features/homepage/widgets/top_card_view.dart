@@ -15,12 +15,14 @@ class TopCardView extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Positioned(
-            top: 12,
+            top: 48,
             child: Transform.scale(
-                scale: 1.1, child: Image.asset("assets/images/Top Card.png")),
+              scale: 1.1,
+              child: Image.asset("assets/images/Top Card.png"),
+            ),
           ),
           const Padding(
-            padding: EdgeInsets.only(left: 32, top: 12),
+            padding: EdgeInsets.only(left: 32, top: 54),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -36,11 +38,17 @@ class TopCardView extends StatelessWidget {
                 ),
                 Text(
                   "Delish vegan burger",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 13,
+                      fontWeight: FontWeight.w300),
                 ),
                 Text(
                   "thats tastes like heaven",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 13,
+                      fontWeight: FontWeight.w300),
                 ),
                 SizedBox(
                   height: 16,
@@ -59,7 +67,7 @@ class TopCardView extends StatelessWidget {
                   newText: "Add to order",
                   nextSite: null,
                   icon: null,
-                  buttonWidth: 112,
+                  buttonWidth: 113,
                   fontSize: 12,
                 ),
               ],
@@ -67,12 +75,12 @@ class TopCardView extends StatelessWidget {
           ),
           Positioned(
             right: 72,
-            top: 16,
+            top: 58,
             child: Image.asset("assets/images/star.png"),
           ),
           const Positioned(
             right: 44,
-            top: 14,
+            top: 56,
             child: Text(
               "4.8",
               style: TextStyle(color: Colors.white),
@@ -81,7 +89,7 @@ class TopCardView extends StatelessWidget {
           Positioned(
             height: 250,
             left: 150,
-            top: 40,
+            top: 72,
             child: Image.asset(
               "assets/images/Burger_3D.png",
             ),
