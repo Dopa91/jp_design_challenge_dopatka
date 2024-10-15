@@ -17,30 +17,39 @@ class Homepage extends StatelessWidget {
           ),
         ),
         child: const SafeArea(
-          child: Padding(
-            padding: EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(left: 16, top: 16),
+                child: Text(
                   "Choose Your Favorite",
                   style: TextStyle(
                       fontSize: 26,
                       color: Colors.white,
                       fontWeight: FontWeight.w800),
                 ),
-                Text(
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 16, bottom: 8),
+                child: Text(
                   "Snack",
                   style: TextStyle(
                       fontSize: 26,
                       color: Colors.white,
                       fontWeight: FontWeight.w800),
                 ),
-                HorizontMenuBar(),
-                TopCardView(),
-                HorizontCardView(),
-              ],
-            ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 16),
+                child: HorizontMenuBar(),
+              ),
+              TopCardView(),
+              Padding(
+                padding: EdgeInsets.only(left: 16),
+                child: HorizontCardView(),
+              ),
+            ],
           ),
         ),
       ),
