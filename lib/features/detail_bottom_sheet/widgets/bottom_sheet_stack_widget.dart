@@ -49,7 +49,7 @@ class BottomSheetStackWidgetState extends State<BottomSheetStackWidget> {
           right: 0,
           bottom: 32,
           child: MyButton(
-            newText: "Add to order for ¥ ${widget.price}",
+            newText: "Add to order for${widget.price}",
             nextSite: () {
               Navigator.pop(context);
             },
