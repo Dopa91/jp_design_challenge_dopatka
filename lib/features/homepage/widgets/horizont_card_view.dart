@@ -38,8 +38,8 @@ class HorizontCardView extends StatelessWidget {
             imagePath: "assets/images/Burger_3D.png",
             title: "Batch'7 BigBurger",
             subtitle: 'Delish beef burger',
-            price: '¥ 11.99',
-            iconValue: '250',
+            price: '¥ 13.99',
+            iconValue: '300',
           ),
           RecommendCard(
             imagePath: "assets/images/ice cream stick_3D.png",
