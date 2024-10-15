@@ -38,16 +38,22 @@ class BottomSheetDetailCont extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
               ),
-              const SizedBox(height: 8),
+              const SizedBox(
+                height: 8,
+              ),
               const Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(
+                  8.0,
+                ),
                 child: Text(
                   textAlign: TextAlign.center,
                   "Lorem ipsum dolor sit amet consectetur. Non feugiat imperdiet a vel sit at amet. Mi accumsan feugiat magna aliquam feugiat ac et. Pulvinar hendrerit id arcu at sed etiam semper mi hendrerit. Id aliquet quis quam.",
                   style: TextStyle(fontSize: 14, color: Colors.white),
                 ),
               ),
-              const SizedBox(height: 16),
+              const SizedBox(
+                height: 16,
+              ),
               Text(
                 price,
                 style: const TextStyle(
@@ -59,50 +65,64 @@ class BottomSheetDetailCont extends StatelessWidget {
                 height: 16,
               ),
               const Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(
+                  8.0,
+                ),
                 child: Divider(),
               ),
-              const Row(
-                children: [
-                  Text(
-                    "ingredients",
-                    style: TextStyle(color: Colors.white, fontSize: 12),
-                  ),
-                  Expanded(child: SizedBox()),
-                  Text(
-                    "Reviews",
-                    style: TextStyle(color: Colors.white, fontSize: 12),
-                  )
-                ],
+              const Padding(
+                padding: EdgeInsets.only(
+                  right: 8,
+                  left: 8,
+                ),
+                child: Row(
+                  children: [
+                    Text(
+                      "ingredients",
+                      style: TextStyle(color: Colors.white, fontSize: 12),
+                    ),
+                    Expanded(child: SizedBox()),
+                    Text(
+                      "Reviews",
+                      style: TextStyle(color: Colors.white, fontSize: 12),
+                    )
+                  ],
+                ),
               ),
-              const Row(
-                children: [
-                  BottomSheetIconRow(
-                    icon: Icons.info_outline,
-                    iconTwo: Icons.info_outline,
-                    iconThree: Icons.info_outline,
-                    iconFour: Icons.info_outline,
-                  ),
-                  Expanded(
-                    child: SizedBox(),
-                  ),
-                  BottomSheetIconRow(
-                    icon: Icons.star,
-                    iconTwo: Icons.star,
-                    iconThree: Icons.star,
-                    iconFour: Icons.star_border,
-                  ),
-                  SizedBox(
-                    width: 8,
-                  ),
-                  Text(
-                    "4.0",
-                    style: TextStyle(
+              const Padding(
+                padding: EdgeInsets.all(
+                  8.0,
+                ),
+                child: Row(
+                  children: [
+                    BottomSheetIconRow(
+                      icon: Icons.macro_off_outlined,
+                      iconTwo: Icons.macro_off_rounded,
+                      iconThree: Icons.catching_pokemon_outlined,
+                      iconFour: Icons.whatshot_outlined,
+                    ),
+                    Expanded(
+                      child: SizedBox(),
+                    ),
+                    BottomSheetIconRow(
+                      icon: Icons.star,
+                      iconTwo: Icons.star,
+                      iconThree: Icons.star,
+                      iconFour: Icons.star_border,
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Text(
+                      "4.0",
+                      style: TextStyle(
                         color: Colors.white,
                         fontSize: 14,
-                        fontWeight: FontWeight.w700),
-                  ),
-                ],
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
