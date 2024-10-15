@@ -27,7 +27,6 @@ class MyButton extends StatelessWidget {
         child: Container(
           width: buttonWidth,
           height: buttonHeight,
-          padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
             border: Border.all(
               color: const Color.fromARGB(255, 238, 178, 232),
@@ -35,13 +34,13 @@ class MyButton extends StatelessWidget {
             boxShadow: const [
               BoxShadow(
                 color: Color.fromARGB(255, 221, 133, 198),
-                spreadRadius: 3,
-                blurRadius: 5,
+                spreadRadius: 4,
+                blurRadius: 4,
               ),
               BoxShadow(
-                color: Color.fromARGB(255, 190, 41, 200),
-                spreadRadius: 1,
-                blurRadius: 3,
+                color: Color.fromARGB(255, 235, 105, 245),
+                spreadRadius: 4,
+                blurRadius: 2,
               )
             ],
             gradient: const LinearGradient(
