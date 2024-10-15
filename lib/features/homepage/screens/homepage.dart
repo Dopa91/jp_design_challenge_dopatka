@@ -4,7 +4,15 @@ import 'package:jp_design_challenge_dopatka/features/homepage/widgets/horizont_m
 import 'package:jp_design_challenge_dopatka/features/homepage/widgets/top_card_view.dart';
 
 class Homepage extends StatelessWidget {
-  const Homepage({super.key});
+  const Homepage(
+      {super.key,
+      required this.imagePath,
+      required this.title,
+      required this.price});
+
+  final String imagePath;
+  final String title;
+  final String price;
 
   @override
   Widget build(BuildContext context) {
@@ -16,11 +24,11 @@ class Homepage extends StatelessWidget {
             image: AssetImage("assets/images/bg_mainscreen.png"),
           ),
         ),
-        child: const SafeArea(
+        child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(left: 16, top: 16),
                 child: Text(
                   "Choose Your Favorite",
@@ -30,7 +38,7 @@ class Homepage extends StatelessWidget {
                       fontWeight: FontWeight.w800),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(left: 16, bottom: 8),
                 child: Text(
                   "Snack",
@@ -40,14 +48,21 @@ class Homepage extends StatelessWidget {
                       fontWeight: FontWeight.w800),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(left: 16),
                 child: HorizontMenuBar(),
               ),
-              TopCardView(),
+              const TopCardView(
+                imagePath: "assets/images/Burger_3D.png",
+                title: "Angi's Yummy Burger",
+                price: "¥ 13.99",
+                subTitle: "Delish vegan Burger",
+                subTitleTwo: "thats tastes like heaven",
+              ),
               Padding(
-                padding: EdgeInsets.only(left: 16),
-                child: HorizontCardView(),
+                padding: const EdgeInsets.only(left: 16),
+                child: HorizontCardView(
+                    imagePath: imagePath, title: title, price: price),
               ),
             ],
           ),

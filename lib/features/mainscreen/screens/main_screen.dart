@@ -36,7 +36,11 @@ class MainScreen extends StatelessWidget {
           ),
           const Positioned(
             bottom: 80,
-            child: MyBlurryCont(),
+            child: MyBlurryCont(
+              imagePath: '',
+              title: '',
+              price: '',
+            ),
           ),
         ],
       ),

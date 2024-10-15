@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jp_design_challenge_dopatka/features/detail_bottom_sheet/widgets/bottom_sheet_stack_widget.dart';
+import 'package:jp_design_challenge_dopatka/features/detail_bottom_sheet/screens/bottom_sheet_page.dart';
 import 'package:jp_design_challenge_dopatka/features/shared/my_button.dart';
 
 class TopCardView extends StatelessWidget {
@@ -8,10 +8,14 @@ class TopCardView extends StatelessWidget {
     required this.imagePath,
     required this.title,
     required this.price,
+    required this.subTitle,
+    required this.subTitleTwo,
   });
 
   final String imagePath;
   final String title;
+  final String subTitle;
+  final String subTitleTwo;
   final String price;
 
   @override
@@ -36,9 +40,9 @@ class TopCardView extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  "Angi's Yummy Burger",
-                  style: TextStyle(
+                Text(
+                  title,
+                  style: const TextStyle(
                       color: Colors.white,
                       fontSize: 18,
                       fontWeight: FontWeight.w700),
@@ -46,16 +50,16 @@ class TopCardView extends StatelessWidget {
                 const SizedBox(
                   height: 8,
                 ),
-                const Text(
-                  "Delish vegan burger",
-                  style: TextStyle(
+                Text(
+                  subTitle,
+                  style: const TextStyle(
                       color: Colors.white,
                       fontSize: 13,
                       fontWeight: FontWeight.w300),
                 ),
-                const Text(
-                  "thats tastes like heaven",
-                  style: TextStyle(
+                Text(
+                  subTitleTwo,
+                  style: const TextStyle(
                       color: Colors.white,
                       fontSize: 13,
                       fontWeight: FontWeight.w300),
@@ -63,9 +67,9 @@ class TopCardView extends StatelessWidget {
                 const SizedBox(
                   height: 16,
                 ),
-                const Text(
-                  "¥ 13.99",
-                  style: TextStyle(
+                Text(
+                  price,
+                  style: const TextStyle(
                       color: Colors.white,
                       fontSize: 18,
                       fontWeight: FontWeight.w700),
@@ -79,7 +83,7 @@ class TopCardView extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => BottomSheetStackWidget(
+                        builder: (context) => BottomSheetPage(
                             imagePath: imagePath, title: title, price: price),
                       ),
                     );
@@ -110,7 +114,7 @@ class TopCardView extends StatelessWidget {
             left: 164,
             top: 72,
             child: Image.asset(
-              "assets/images/Burger_3D.png",
+              imagePath,
             ),
           ),
           const Positioned(

@@ -6,7 +6,14 @@ import 'package:jp_design_challenge_dopatka/features/shared/my_button.dart';
 class MyBlurryCont extends StatelessWidget {
   const MyBlurryCont({
     super.key,
+    required this.imagePath,
+    required this.title,
+    required this.price,
   });
+
+  final String imagePath;
+  final String title;
+  final String price;
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +59,8 @@ class MyBlurryCont extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Homepage(),
+                      builder: (context) => Homepage(
+                          imagePath: imagePath, title: title, price: price),
                     ),
                   );
                 },

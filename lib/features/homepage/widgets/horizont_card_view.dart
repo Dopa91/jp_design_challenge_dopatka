@@ -4,7 +4,14 @@ import 'package:jp_design_challenge_dopatka/features/homepage/widgets/recommend_
 class HorizontCardView extends StatelessWidget {
   const HorizontCardView({
     super.key,
+    required this.imagePath,
+    required this.title,
+    required this.price,
   });
+
+  final String imagePath;
+  final String title;
+  final String price;
 
   @override
   Widget build(BuildContext context) {
