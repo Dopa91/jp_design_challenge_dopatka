@@ -9,12 +9,24 @@ class MyButton extends StatelessWidget {
     required this.buttonWidth,
     required this.fontSize,
     required this.buttonHeight,
+    required this.gradientOne,
+    required this.gradientTwo,
+    required this.gradientthree,
+    required this.shadowOne,
+    required this.shadowTwo,
   });
 
   final IconData? icon;
   final double buttonWidth;
   final double? buttonHeight;
   final double fontSize;
+
+  final Color gradientOne;
+  final Color gradientTwo;
+  final Color gradientthree;
+
+  final Color shadowOne;
+  final Color shadowTwo;
 
   final String newText;
   final void Function()? nextSite;
@@ -29,25 +41,25 @@ class MyButton extends StatelessWidget {
           height: buttonHeight,
           decoration: BoxDecoration(
             border: Border.all(
-              color: const Color.fromARGB(255, 238, 178, 232),
+              color: const Color.fromARGB(255, 217, 144, 210),
             ),
-            boxShadow: const [
+            boxShadow: [
               BoxShadow(
-                color: Color.fromARGB(255, 221, 133, 198),
+                color: shadowOne,
                 spreadRadius: 4,
                 blurRadius: 4,
               ),
               BoxShadow(
-                color: Color.fromARGB(255, 235, 105, 245),
+                color: shadowTwo,
                 spreadRadius: 4,
                 blurRadius: 2,
               )
             ],
-            gradient: const LinearGradient(
+            gradient: LinearGradient(
               colors: [
-                Color.fromARGB(255, 218, 85, 187),
-                Color.fromARGB(255, 226, 131, 218),
-                Color.fromARGB(255, 243, 171, 230),
+                gradientOne,
+                gradientTwo,
+                gradientthree,
               ],
             ),
             color: const Color.fromARGB(255, 218, 85, 187),
@@ -62,7 +74,7 @@ class MyButton extends StatelessWidget {
                 newText,
                 style: TextStyle(
                     fontSize: fontSize,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w700,
                     color: Colors.white),
               ),
               const Expanded(child: SizedBox()),
