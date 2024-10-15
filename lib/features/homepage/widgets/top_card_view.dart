@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:jp_design_challenge_dopatka/features/detail_bottom_sheet/widgets/bottom_sheet_stack_widget.dart';
 import 'package:jp_design_challenge_dopatka/features/shared/my_button.dart';
 
 class TopCardView extends StatelessWidget {
   const TopCardView({
     super.key,
+    required this.imagePath,
+    required this.title,
+    required this.price,
   });
+
+  final String imagePath;
+  final String title;
+  final String price;
 
   @override
   Widget build(BuildContext context) {
@@ -23,51 +31,59 @@ class TopCardView extends StatelessWidget {
               ),
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.only(left: 32, top: 54),
+          Padding(
+            padding: const EdgeInsets.only(left: 32, top: 54),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Angi's Yummy Burger",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 18,
                       fontWeight: FontWeight.w700),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 8,
                 ),
-                Text(
+                const Text(
                   "Delish vegan burger",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 13,
                       fontWeight: FontWeight.w300),
                 ),
-                Text(
+                const Text(
                   "thats tastes like heaven",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 13,
                       fontWeight: FontWeight.w300),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
-                Text(
+                const Text(
                   "¥ 13.99",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 18,
                       fontWeight: FontWeight.w700),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 52,
                 ),
                 MyButton(
                   newText: "Add to order",
-                  nextSite: null,
+                  nextSite: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => BottomSheetStackWidget(
+                            imagePath: imagePath, title: title, price: price),
+                      ),
+                    );
+                  },
                   icon: null,
                   buttonWidth: 113,
                   fontSize: 12,
