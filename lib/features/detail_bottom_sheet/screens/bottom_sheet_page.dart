@@ -16,7 +16,7 @@ class BottomSheetPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 700,
+      height: 750,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: const Color.fromARGB(255, 61, 57, 57),
