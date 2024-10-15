@@ -37,7 +37,7 @@ class MyBlurryCont extends StatelessWidget {
               ),
             ),
             const Text(
-              "Explore Angißs most popular snack selection",
+              "Explore Angi's most popular snack selection",
               style: TextStyle(color: Colors.white, fontSize: 14),
             ),
             const Text(
@@ -57,8 +57,8 @@ class MyBlurryCont extends StatelessWidget {
                   );
                 },
                 icon: null,
-                buttonWidth: 196,
-                fontSize: 14,
+                buttonWidth: 212,
+                fontSize: 16,
               ),
             ),
           ],
