@@ -59,6 +59,7 @@ class MyBlurryCont extends StatelessWidget {
                 icon: null,
                 buttonWidth: 212,
                 fontSize: 16,
+                buttonHeight: 55,
               ),
             ),
           ],

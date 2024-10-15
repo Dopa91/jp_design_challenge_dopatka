@@ -17,8 +17,10 @@ class TopCardView extends StatelessWidget {
           Positioned(
             top: 48,
             child: Transform.scale(
-              scale: 1.1,
-              child: Image.asset("assets/images/Top Card.png"),
+              scale: 1.125,
+              child: Image.asset(
+                "assets/images/Top Card.png",
+              ),
             ),
           ),
           const Padding(
@@ -69,6 +71,7 @@ class TopCardView extends StatelessWidget {
                   icon: null,
                   buttonWidth: 113,
                   fontSize: 12,
+                  buttonHeight: 48,
                 ),
               ],
             ),
@@ -88,7 +91,7 @@ class TopCardView extends StatelessWidget {
           ),
           Positioned(
             height: 250,
-            left: 150,
+            left: 164,
             top: 72,
             child: Image.asset(
               "assets/images/Burger_3D.png",

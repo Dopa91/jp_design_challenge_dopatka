@@ -8,10 +8,12 @@ class MyButton extends StatelessWidget {
     required this.icon,
     required this.buttonWidth,
     required this.fontSize,
+    required this.buttonHeight,
   });
 
   final IconData? icon;
   final double buttonWidth;
+  final double? buttonHeight;
   final double fontSize;
 
   final String newText;
@@ -23,7 +25,7 @@ class MyButton extends StatelessWidget {
       onTap: nextSite,
       child: Container(
         width: buttonWidth,
-        height: 55,
+        height: buttonHeight,
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           border: Border.all(

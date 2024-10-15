@@ -49,13 +49,15 @@ class BottomSheetStackWidgetState extends State<BottomSheetStackWidget> {
           right: 0,
           bottom: 32,
           child: MyButton(
-              newText: "Add to order for ¥ 8.99",
-              nextSite: () {
-                Navigator.pop(context);
-              },
-              icon: null,
-              buttonWidth: 350,
-              fontSize: 18),
+            newText: "Add to order for ¥ 8.99",
+            nextSite: () {
+              Navigator.pop(context);
+            },
+            icon: null,
+            buttonWidth: 350,
+            fontSize: 18,
+            buttonHeight: 50,
+          ),
         ),
         Positioned(
           left: 0,
