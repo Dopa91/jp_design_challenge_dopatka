@@ -27,14 +27,14 @@ class Homepage extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 26,
                       color: Colors.white,
-                      fontWeight: FontWeight.w700),
+                      fontWeight: FontWeight.w800),
                 ),
                 Text(
                   "Snack",
                   style: TextStyle(
                       fontSize: 26,
                       color: Colors.white,
-                      fontWeight: FontWeight.w700),
+                      fontWeight: FontWeight.w800),
                 ),
                 HorizontMenuBar(),
                 TopCardView(),
