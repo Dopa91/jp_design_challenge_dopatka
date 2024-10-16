@@ -38,10 +38,12 @@ class RecommendCard extends StatelessWidget {
             border: Border.all(color: const Color.fromARGB(255, 234, 185, 218)),
             borderRadius: BorderRadius.circular(32),
             gradient: const LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
               colors: [
-                Color.fromARGB(255, 190, 113, 221),
-                Color.fromARGB(255, 117, 119, 233),
-                Color.fromARGB(207, 124, 127, 204),
+                Color.fromARGB(120, 79, 73, 201),
+                Color.fromARGB(255, 123, 124, 199),
+                Color.fromARGB(207, 140, 85, 192),
               ],
             ),
           ),
