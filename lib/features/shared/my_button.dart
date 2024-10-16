@@ -53,7 +53,7 @@ class MyButton extends StatelessWidget {
                 color: shadowTwo,
                 spreadRadius: 4,
                 blurRadius: 2,
-              )
+              ),
             ],
             gradient: LinearGradient(
               colors: [
@@ -77,13 +77,15 @@ class MyButton extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                     color: Colors.white),
               ),
-              const Expanded(child: SizedBox()),
+              const Expanded(
+                child: SizedBox(),
+              ),
               icon == null
                   ? const SizedBox()
                   : Icon(
                       icon,
                       color: Colors.white,
-                    )
+                    ),
             ],
           ),
         ),
