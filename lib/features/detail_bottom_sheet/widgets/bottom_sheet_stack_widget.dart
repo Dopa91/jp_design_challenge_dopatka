@@ -45,9 +45,9 @@ class BottomSheetStackWidgetState extends State<BottomSheetStackWidget> {
               BottomSheetDetailCont(title: widget.title, price: widget.price),
         ),
         Positioned(
-          left: 350,
-          right: 4,
-          top: 0,
+          left: 364,
+          right: 0,
+          top: -18,
           child: IconButton(
             onPressed: () => Navigator.pop(context),
             icon: const Icon(
