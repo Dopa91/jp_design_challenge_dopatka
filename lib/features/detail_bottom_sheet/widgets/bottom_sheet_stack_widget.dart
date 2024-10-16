@@ -45,23 +45,16 @@ class BottomSheetStackWidgetState extends State<BottomSheetStackWidget> {
               BottomSheetDetailCont(title: widget.title, price: widget.price),
         ),
         Positioned(
-          left: 364,
+          left: 350,
           right: 4,
-          top: 8,
-          child: MyButton(
-            newText: "X",
-            nextSite: () {
-              Navigator.pop(context);
-            },
-            icon: null,
-            buttonWidth: 16,
-            fontSize: 18,
-            buttonHeight: 32,
-            gradientOne: const Color.fromARGB(255, 186, 97, 174),
-            gradientTwo: const Color.fromARGB(255, 229, 145, 215),
-            gradientthree: const Color.fromARGB(255, 198, 176, 130),
-            shadowOne: const Color.fromARGB(255, 145, 129, 95),
-            shadowTwo: const Color.fromARGB(255, 193, 114, 183),
+          top: 0,
+          child: IconButton(
+            onPressed: () => Navigator.pop(context),
+            icon: const Icon(
+              Icons.cancel_outlined,
+              size: 36,
+              color: Colors.grey,
+            ),
           ),
         ),
         Positioned(
