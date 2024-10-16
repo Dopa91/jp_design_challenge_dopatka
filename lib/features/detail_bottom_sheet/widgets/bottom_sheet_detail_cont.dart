@@ -92,16 +92,16 @@ class BottomSheetDetailCont extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      "ingredients",
+                      "Ingredients",
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     ),
-                    Expanded(flex: 5, child: SizedBox()),
+                    Expanded(flex: 7, child: SizedBox()),
                     Text(
                       "Reviews",
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     ),
                     Expanded(
-                      flex: 2,
+                      flex: 4,
                       child: SizedBox(),
                     )
                   ],
@@ -126,7 +126,8 @@ class BottomSheetDetailCont extends StatelessWidget {
                       icon: Icons.star,
                       iconTwo: Icons.star,
                       iconThree: Icons.star,
-                      iconFour: Icons.star_border,
+                      iconFour: Icons.star,
+                      iconFive: Icons.star_border,
                     ),
                     SizedBox(
                       width: 8,
