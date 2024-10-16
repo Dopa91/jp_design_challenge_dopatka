@@ -19,7 +19,7 @@ class BottomSheetStackWidget extends StatefulWidget {
 }
 
 class BottomSheetStackWidgetState extends State<BottomSheetStackWidget> {
-  List<bool> selectedButton = [true, false, false];
+  List<bool> selectedButton = [false, false, true];
 
   @override
   Widget build(BuildContext context) {
