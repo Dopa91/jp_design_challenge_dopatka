@@ -7,12 +7,15 @@ class BottomSheetIconRow extends StatelessWidget {
     required this.iconTwo,
     required this.iconThree,
     required this.iconFour,
+    this.iconFive,
   });
 
   final IconData icon;
   final IconData iconTwo;
   final IconData iconThree;
   final IconData iconFour;
+  final IconData? iconFive;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -34,6 +37,11 @@ class BottomSheetIconRow extends StatelessWidget {
         ),
         Icon(
           iconFour,
+          color: Colors.white,
+          size: 21,
+        ),
+        Icon(
+          iconFive,
           color: Colors.white,
           size: 21,
         ),
