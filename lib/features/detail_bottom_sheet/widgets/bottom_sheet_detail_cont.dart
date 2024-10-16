@@ -28,8 +28,25 @@ class BottomSheetDetailCont extends StatelessWidget {
           borderRadius: BorderRadius.circular(32),
           child: Column(
             children: [
-              const SizedBox(
-                height: 16,
+              const Padding(
+                padding: EdgeInsets.only(right: 16, top: 8),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Icon(
+                      Icons.favorite_border,
+                      color: Colors.white,
+                      size: 18,
+                    ),
+                    SizedBox(
+                      width: 4,
+                    ),
+                    Text(
+                      "200",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
               ),
               Text(
                 title,
@@ -37,9 +54,6 @@ class BottomSheetDetailCont extends StatelessWidget {
                     fontSize: 26,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
-              ),
-              const SizedBox(
-                height: 8,
               ),
               const Padding(
                 padding: EdgeInsets.all(
@@ -62,7 +76,7 @@ class BottomSheetDetailCont extends StatelessWidget {
                     fontWeight: FontWeight.w800),
               ),
               const SizedBox(
-                height: 16,
+                height: 8,
               ),
               const Padding(
                 padding: EdgeInsets.all(
@@ -81,10 +95,14 @@ class BottomSheetDetailCont extends StatelessWidget {
                       "ingredients",
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     ),
-                    Expanded(child: SizedBox()),
+                    Expanded(flex: 5, child: SizedBox()),
                     Text(
                       "Reviews",
                       style: TextStyle(color: Colors.white, fontSize: 12),
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child: SizedBox(),
                     )
                   ],
                 ),
