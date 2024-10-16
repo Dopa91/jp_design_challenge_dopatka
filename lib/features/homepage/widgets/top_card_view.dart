@@ -80,12 +80,13 @@ class TopCardView extends StatelessWidget {
                 MyButton(
                   newText: "Add to order",
                   nextSite: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => BottomSheetPage(
-                            imagePath: imagePath, title: title, price: price),
-                      ),
+                    showModalBottomSheet(
+                      isScrollControlled: true,
+                      context: context,
+                      builder: (BuildContext context) {
+                        return BottomSheetPage(
+                            imagePath: imagePath, title: title, price: price);
+                      },
                     );
                   },
                   icon: null,
