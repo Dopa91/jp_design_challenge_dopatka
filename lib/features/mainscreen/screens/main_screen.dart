@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jp_design_challenge_dopatka/features/mainscreen/widgets/my_blurry_cont.dart';
+import 'package:jp_design_challenge_dopatka/features/mainscreen/widgets/call_to_action_container.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({
@@ -36,7 +36,7 @@ class MainScreen extends StatelessWidget {
           ),
           const Positioned(
             bottom: 80,
-            child: MyBlurryCont(
+            child: CallToActionContainer(
               imagePath: '',
               title: '',
               price: '',
